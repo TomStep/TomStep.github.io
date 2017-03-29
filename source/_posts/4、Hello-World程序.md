@@ -1,7 +1,7 @@
 ---
 title: 4、Hello World程序
 date: 2017-03-29 10:44:15
-tags:[React-native]
+tags: [React-native]
 ---
 
 ### 第一个hello world 代码
