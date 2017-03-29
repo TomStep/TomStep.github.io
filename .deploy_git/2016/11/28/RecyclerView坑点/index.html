@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>RecyclerView坑点 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="RecyclerView用来代替ListView和GridView，它的优点很多，这里就不详细说明了。这里主要记录下我在使用RecyclerView时候的主要坑点。
+卡顿！！如果在item中使用了较为复杂的布局，如嵌套等。就会出现卡顿现象。（是特别卡）
+解决方法：网上查找的方案有以下几种思路：
+1、如果有很多图片加载，可以使用图片加载框架。配合加载时机（停止滑动时加载图片）。2、尽量不要使用太复杂">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RecyclerView坑点">
+<meta property="og:url" content="http://yoursite.com/2016/11/28/RecyclerView坑点/index.html">
+<meta property="og:site_name" content="Tom's Blog">
+<meta property="og:description" content="RecyclerView用来代替ListView和GridView，它的优点很多，这里就不详细说明了。这里主要记录下我在使用RecyclerView时候的主要坑点。
+卡顿！！如果在item中使用了较为复杂的布局，如嵌套等。就会出现卡顿现象。（是特别卡）
+解决方法：网上查找的方案有以下几种思路：
+1、如果有很多图片加载，可以使用图片加载框架。配合加载时机（停止滑动时加载图片）。2、尽量不要使用太复杂">
+<meta property="og:updated_time" content="2016-11-28T09:26:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RecyclerView坑点">
+<meta name="twitter:description" content="RecyclerView用来代替ListView和GridView，它的优点很多，这里就不详细说明了。这里主要记录下我在使用RecyclerView时候的主要坑点。
+卡顿！！如果在item中使用了较为复杂的布局，如嵌套等。就会出现卡顿现象。（是特别卡）
+解决方法：网上查找的方案有以下几种思路：
+1、如果有很多图片加载，可以使用图片加载框架。配合加载时机（停止滑动时加载图片）。2、尽量不要使用太复杂">
+  
+    <link rel="alternative" href="/atom.xml" title="Tom&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://og5n67ybk.bkt.clouddn.com/D6DF145A355830F6BEAD7985F2A0CECD.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Tom</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Android小青年</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/TomStep/" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Tom</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://og5n67ybk.bkt.clouddn.com/D6DF145A355830F6BEAD7985F2A0CECD.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Tom</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Android小青年</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TomStep/" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-RecyclerView坑点" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      RecyclerView坑点
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>RecyclerView用来代替ListView和GridView，它的优点很多，这里就不详细说明了。这里主要记录下我在使用RecyclerView时候的主要坑点。</p>
+<h3 id="卡顿！！"><a href="#卡顿！！" class="headerlink" title="卡顿！！"></a>卡顿！！</h3><p>如果在item中使用了较为复杂的布局，如嵌套等。就会出现卡顿现象。（是特别卡）</p>
+<p><strong>解决方法：</strong><br>网上查找的方案有以下几种思路：</p>
+<p>1、如果有很多图片加载，可以使用图片加载框架。配合加载时机（停止滑动时加载图片）。<br>2、尽量不要使用太复杂的布局，可以自定义View,或者改UI<br>3、如果一定要使用嵌套的话，不要嵌套GridView，直接嵌套RecycleView好了。<br>4、可以用同一个RecycleViewPool</p>
+<p>然而有时候这几种方案并不能完全解决我们的问题，卡顿还是会出现。</p>
+<a id="more"></a>  
+<hr>
+<h3 id="从RecyclerView源码入手"><a href="#从RecyclerView源码入手" class="headerlink" title="从RecyclerView源码入手"></a>从RecyclerView源码入手</h3><blockquote>
+<p>参考：<a href="http://www.jianshu.com/p/32c963b1ebc1（文／梨花满天便是雪）" target="_blank" rel="external">http://www.jianshu.com/p/32c963b1ebc1（文／梨花满天便是雪）</a><br>可以先看这篇博客了解下RecyckerView大概缓存机制。</p>
+</blockquote>
+<p><strong>RecycledViewPool</strong></p>
+<blockquote>
+<p>RecycledViewPool类是用来缓存Item用，是一个ViewHolder的缓存池，如果多个RecyclerView之间用setRecycledViewPool(RecycledViewPool)设置同一个RecycledViewPool，他们就可以共享Item。其实RecycledViewPool的内部维护了一个Map，里面以不同的viewType为Key存储了各自对应的ViewHolder集合。可以通过提供的方法来修改内部缓存的Viewholder。</p>
+</blockquote>
+<p>所以，当不同的RecyclerView中使用相同类型的item时，利用共享一个RecycledViewPool，就可以提升滑动的流程程度。</p>
+<p>这个类提供了四个公共方法：</p>
+<ul>
+<li>clear()  清空缓存池</li>
+<li>getRecycledView(int viewType)  得到一个viewType类型的Item</li>
+<li>putRecycledView(RecyclerView.ViewHolder scrap)  把viewType类型的Item放入缓存池</li>
+<li>setMaxRecycledViews(int viewType, int max)  设置对应viewType类型的Item的最大缓存数量</li>
+</ul>
+<hr>
+<p><strong>ViewCacheExtension</strong></p>
+<blockquote>
+<p>ViewCacheExtension的代码一看什么都没有，没错这是一个需要开发者重写的类。上面Recycler里调用Recycler.getViewForPosition(int)方法获取View时，Recycler先检查自己内部的attached scrap和一级缓存，再检查ViewCacheExtension.getViewForPositionAndType(Recycler, int, int)，最后检查RecyclerViewPool，从上面三个任何一个只要拿到View就不会调用下一个方法。所以我们可以重写getViewForPositionAndType(Recycler recycler, int position, int type)，在方法里通过Recycler类控制View缓存。注意：如果你重写了这个类，Recycler不会在这个类中做缓存View的操作，是否缓存View完全由开发者控制。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewCacheExtension</span> </span>&#123;</div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">abstract</span> <span class="keyword">public</span> View <span class="title">getViewForPositionAndType</span><span class="params">(Recycler recycler, <span class="keyword">int</span> position, <span class="keyword">int</span> type)</span></span>;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>这个类里面只有提供了一个方法，就是获取缓存View的方法。开发者要自己想办法把想要缓存的View放进去。</p>
+<p>我的做法是：创建一个类来继承ViewCacheExtension，重写里面的方法。在onBindClickViewHolder（）方法创建实例，把对应holder的View加进去。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolderCache</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewCacheExtension</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> View mView;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ViewHolderCache</span><span class="params">(CateGoryHolder holder)</span> </span>&#123;</div><div class="line">        mView = holder.getItemView();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getViewForPositionAndType</span><span class="params">(RecyclerView.Recycler recycler, <span class="keyword">int</span> position, <span class="keyword">int</span> type)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(type == Type.CATEGORY.ordinal() &amp;&amp; position == <span class="number">1</span>)&#123;</div><div class="line">            <span class="keyword">return</span> mView;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">------</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindClickViewHolder</span><span class="params">(RecyclerView.ViewHolder holder, <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        ...</div><div class="line">        ((CateGoryHolder) holder).setGridView(mContext,recycledViewPool, mCategoryList);</div><div class="line"></div><div class="line">        ViewHolderCache viewHolderCache = <span class="keyword">new</span> ViewHolderCache((CateGoryHolder)holder);</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里可以保存特定的View缓存。解决比较特殊的item Type卡顿现象。</p>
+<p><strong>setItemViewCacheSize方法</strong></p>
+<p>最后的最后，如果你实在解决不了了。可以使用RecyclerView.setItemViewCacheSize(data.size())。<br>虽然解决了燃眉之急，不过潜在的风险你懂得。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/28/RecyclerView坑点/" class="archive-article-date">
+  	<time datetime="2016-11-28T08:11:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/30/Gson解析泛型问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Gson解析泛型问题(更加灵活的处理方法)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/10/Material-Design学习笔记（1）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Material Design UI组件学习笔记（1） </div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Tom
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Material-Design/" style="font-size: 15px;">Material Design</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;Tom&lt;br&gt; &lt;br&gt;Android开发，有为好青年&lt;br&gt; &lt;br&gt;热爱代码与动漫&lt;br&gt;</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
