@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>2、第一个程序与状态机的概念 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首先认识Index.android.js里面的代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2、第一个程序与状态机的概念">
+<meta property="og:url" content="http://yoursite.com/2017/03/29/2、第一个程序与状态机的概念/index.html">
+<meta property="og:site_name" content="Tom's Blog">
+<meta property="og:description" content="首先认识Index.android.js里面的代码">
+<meta property="og:updated_time" content="2017-03-29T02:40:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2、第一个程序与状态机的概念">
+<meta name="twitter:description" content="首先认识Index.android.js里面的代码">
+  
+    <link rel="alternative" href="/atom.xml" title="Tom&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://og5n67ybk.bkt.clouddn.com/D6DF145A355830F6BEAD7985F2A0CECD.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Tom</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Android小青年</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/TomStep/" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Tom</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://og5n67ybk.bkt.clouddn.com/D6DF145A355830F6BEAD7985F2A0CECD.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Tom</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Android小青年</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TomStep/" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-2、第一个程序与状态机的概念" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2、第一个程序与状态机的概念
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先认识Index.android.js里面的代码 </p>
+<a id="more"></a> 
+<h3 id="认识Index-android-js里面的代码"><a href="#认识Index-android-js里面的代码" class="headerlink" title="认识Index.android.js里面的代码"></a>认识Index.android.js里面的代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">********</div><div class="line">** 组件导入区  **</div><div class="line"></div><div class="line">import React, &#123; Component &#125; from 'react';</div><div class="line">import &#123;</div><div class="line">    AppRegistry, //框架提供的API</div><div class="line">    StyleSheet,</div><div class="line">    Text,  // RN提供的组件</div><div class="line">    View,</div><div class="line">    TextInput // 记得引入组件</div><div class="line">&#125; from 'react-native';</div><div class="line"></div><div class="line">********</div><div class="line"></div><div class="line">********</div><div class="line">** 核心代码区  **</div><div class="line"></div><div class="line">//逻辑处理</div><div class="line">//let是更完美的var</div><div class="line">let Dimensions = require('Dimensions');// 宽高</div><div class="line">let totalWidth = Dimensions.get('window').width;  //声明了三个变量,根据屏幕动态变化</div><div class="line">let leftStartPoint = totalWidth * 0.1;</div><div class="line">let componentWidth = totalWidth * 0.8;</div><div class="line"></div><div class="line">//界面绘制</div><div class="line">class AwesomeProject extends Component &#123;</div><div class="line">     render() &#123;</div><div class="line">        return (</div><div class="line">            // 绘制渲染的控件</div><div class="line">            <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=<span class="string">&#123;styles.container&#125;</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">TextInput</span> <span class="attr">style</span>=<span class="string">&#123;styles.numberInputStyle&#125;</span></span></div><div class="line">                           <span class="attr">placeholder</span>=<span class="string">&#123;</span>'请输入手机号'&#125;/&gt;</div><div class="line">                <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;styles.textPromptStyle&#125;</span>&gt;</span></div><div class="line">                    您输入的手机号：</div><div class="line">                <span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">TextInput</span> <span class="attr">style</span>=<span class="string">&#123;styles.passwordInputStyle&#125;</span></span></div><div class="line">                           <span class="attr">placeholder</span>=<span class="string">&#123;</span>'请输入密码'&#125;</div><div class="line">                           <span class="attr">secureTextEntry</span>=<span class="string">&#123;true&#125;/</span>&gt;</div><div class="line">                <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;styles.bigTextPrompt&#125;</span>&gt;</span></div><div class="line">                    确  定</div><div class="line">                <span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">View</span>&gt;</span></div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">********</div><div class="line"></div><div class="line">********</div><div class="line">** 组件样式区  **</div><div class="line"></div><div class="line">// 样式  const变量只能在声明的时候赋值一次</div><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">    //各个组件都没有定义高度,父View设置了flex1,他会沾满整个高度,子组件没有设置会包裹内容</div><div class="line">    container: &#123;</div><div class="line">        flex: 1,  //表示宽高会自动扩展</div><div class="line">        backgroundColor: 'white'</div><div class="line">    &#125;,</div><div class="line">    numberInputStyle: &#123;</div><div class="line">        top: 20,     // top left表示从父组件的顶端(左侧) 向下(向右) 多少位置显示</div><div class="line">        left: leftStartPoint,</div><div class="line">        // height:30,  // IOS开发需要加上该高度</div><div class="line">        width: componentWidth,</div><div class="line">        backgroundColor: 'gray',</div><div class="line">        fontSize: 20</div><div class="line">    &#125;,</div><div class="line">    textPromptStyle: &#123;</div><div class="line">        top: 30,</div><div class="line">        left: leftStartPoint,</div><div class="line">        //  // height:30,  // IOS开发需要加上该高度 因为IOS中TextInput不会自动设置高度</div><div class="line">        width: componentWidth,</div><div class="line">        fontSize: 20</div><div class="line">    &#125;,</div><div class="line">    passwordInputStyle: &#123;</div><div class="line">        top: 50,</div><div class="line">        left: leftStartPoint,</div><div class="line">        width: componentWidth,</div><div class="line">        backgroundColor: 'gray',</div><div class="line">        fontSize: 20</div><div class="line">    &#125;,</div><div class="line">    bigTextPrompt:&#123;</div><div class="line">        top:70,</div><div class="line">        left:leftStartPoint,</div><div class="line">        width:componentWidth,</div><div class="line">        backgroundColor:'gray',</div><div class="line">        color:'white',</div><div class="line">        textAlign:'center',//位置居中显示</div><div class="line">        fontSize:60</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">********</div><div class="line"></div><div class="line">********</div><div class="line">*** 注册启动组件 ***</div><div class="line"></div><div class="line">// 注册了 AwesomeProject 组件</div><div class="line">AppRegistry.registerComponent('AwesomeProject', () =&gt; AwesomeProject);</div></pre></td></tr></table></figure>
+<p><strong>关键字说明</strong></p>
+<p>1、在写代码之前需要导入基本的组件，如：React,Component,AppRegistry,StyleSheet,还有可视组件：Text,View等。</p>
+<p>2、在核心代码区中，也分为两个部分：逻辑处理和界面绘制。</p>
+<p>3、绘制界面等区域需要创建一个组件，如上面的AwesomeProject（AwesomeProject是项目的名，在这里也定义成了一个组件（类class））。</p>
+<p><strong>4、React Native 每个组件都具备render()方法，该方法用来绘制UI。在这里，这个方法直接return了一个JSX代码描述的UI组件。</strong></p>
+<p>5、const styles定义了组件的样式。</p>
+<h3 id="状态机的概念"><a href="#状态机的概念" class="headerlink" title="状态机的概念"></a>状态机的概念</h3><blockquote>
+<p><em>React框架将所有的UI视为一个简单的状态机,那么任意一个UI场景就是状态机中的一种状态.</em><br> 状态机的值一旦变化, 默认界面就会重新渲染,这样一个过程可以很轻松的做到数据与UI保持一致.我们只需要空间状态机中的值就行.</p>
+</blockquote>
+<h4 id="状态机的定义"><a href="#状态机的定义" class="headerlink" title="状态机的定义"></a>状态机的定义</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//在构造函数中申明状态机的初始值</div><div class="line">this.state = &#123;</div><div class="line">    inputedNum : '',    </div><div class="line">    inputedPW : ''</div><div class="line">&#125;</div><div class="line"></div><div class="line">//在this.setState中声明 </div><div class="line">updateNum(newText) &#123;</div><div class="line">    this.setState((state)=&gt; &#123;</div><div class="line">        return &#123;</div><div class="line">            inputedNum: newText</div><div class="line"></div><div class="line">            //这里添加新的状态机变量</div><div class="line">            aBrandnewStateVariable:'I am a new variable.' </div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>1、在括号内的两个参数就是状态机，说白了，状态机就相当于变量。</strong><br><strong>2、状态机的修改需要并且一定只能使用setState函数</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 定义用户名输入函数</div><div class="line">updateNum(newText) &#123;</div><div class="line">    this.setState((state)=&gt; &#123;  //传入状态机参数，state是一个集合类参数</div><div class="line">        return &#123;</div><div class="line">            inputedNum: newText</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 定义密码输入改变</div><div class="line">updatePW(newText) &#123;</div><div class="line">    this.setState(()=&gt; &#123; // 用不到的参数也可以不用写</div><div class="line">        return &#123;</div><div class="line">            inputedPw: newText</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//当输入框发生变化的时候，调用上面两个方法，这里用伪代码表示</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">TextInput</span> <span class="attr">style</span>=<span class="string">&#123;styles.numberInputStyle&#125;</span></span></div><div class="line">                       <span class="attr">keyboardType</span>=<span class="string">&#123;</span>'<span class="attr">phone-pad</span>'&#125;</div><div class="line">                       <span class="attr">placeholder</span>=<span class="string">&#123;</span>'请输入手机号'&#125; </div><div class="line">                       <span class="attr">onChangeText</span>=<span class="string">&#123;(newText)</span>=&gt;this.updateNum(newText)&#125;/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">TextInput</span> <span class="attr">secureTextEntry</span>=<span class="string">&#123;true&#125;</span></span></div><div class="line">                       <span class="attr">style</span>=<span class="string">&#123;styles.passwordInputStyle&#125;</span></div><div class="line">                       <span class="attr">placeholder</span>=<span class="string">&#123;</span>'请输入密码'&#125;</div><div class="line">                       <span class="attr">onChangeText</span>=<span class="string">&#123;(newText)</span>=&gt;this.updatePW(newText)&#125;/&gt;</div><div class="line"></div><div class="line"></div><div class="line">//状态机的值发生变化时，就会重新刷新界面，所以下面显示的电话号码会同步出现</div><div class="line"><span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;styles.textPromptStyle&#125;</span>&gt;</span></div><div class="line">        您输入的手机号：&#123;this.state.inputedNum&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="状态机的扩展"><a href="#状态机的扩展" class="headerlink" title="状态机的扩展"></a>状态机的扩展</h4><blockquote>
+<p><strong>修改状态机可以使用setState函数</strong><br> 其实RN还提供了另外两个函数, replaceState函数与forceUpdate函数,<em>但是不建议大家用。</em></p>
+<p><strong>RN会根据哪个状态机值变化,从而去做相应的渲染。</strong><br> 如果setState函数将传入函数的返回值与当前状态机相比没有任何修改与增加,那么将不会进行渲染.</p>
+</blockquote>
+<p>setState函数的原型（第二个函数）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">setState(object oldState,function callback)</div></pre></td></tr></table></figure>
+<p>伪代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">updateNum(newText) &#123;</div><div class="line">        this.setState((state)=&gt; &#123;</div><div class="line">            for(var aName in state)&#123;  // 遍历之前的状态的 键和值</div><div class="line">                console.log(aName);</div><div class="line">                console.log(state[aName]);</div><div class="line">            &#125;</div><div class="line">            return &#123;</div><div class="line">                // 改变状态机变量</div><div class="line">                inputedNum: newText,</div><div class="line">                aBrandnewStateVariable:'I am a new variable.' //添加了新的状态机变量</div><div class="line">            &#125;;</div><div class="line">        &#125;,this.changeNumDone); // setSate函数的回调函数, 当设置完成重新渲染完成后调用</div><div class="line">    &#125;</div><div class="line">    changeNumDone()&#123;</div><div class="line">        console.log('React Native has changed inputed Num');</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p><strong>1、changeNumDone()函数将在setState完成并且重新渲染完成后调用</strong><br><strong>2、I am a new variable.语句会在第二次输入字符的时候打印</strong></p>
+<h4 id="判断是否渲染"><a href="#判断是否渲染" class="headerlink" title="判断是否渲染"></a>判断是否渲染</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">    //如果在组件中实现这个函数,当RN决定重新渲染组件时,会先调用这个函数.如果返回false, RN将放弃渲染组件. 方法里面接收两个参数,分别代表接下里准备进行渲染所基于的props与state. props里面就包含的styles属性等等.</div><div class="line"></div><div class="line">    </div><div class="line">    boolean shouldComponentUpdate(object nextProps,object nextState)</div><div class="line"></div><div class="line"></div><div class="line">``</div><div class="line"></div><div class="line">```html </div><div class="line"></div><div class="line">    //</div><div class="line">    // 接下来是否进行渲染 shouldComponentUpdate(object nextProps, object nextState)</div><div class="line">    shouldComponentUpdate() &#123; //接下来是否进行渲染</div><div class="line">        if(this.state.inputedNum.length<span class="tag">&lt;<span class="name">3)</span> <span class="attr">return</span> <span class="attr">false</span>;</span></div><div class="line">        <span class="attr">return</span> <span class="attr">true</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/03/29/2、第一个程序与状态机的概念/" class="archive-article-date">
+  	<time datetime="2017-03-29T02:38:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-03-29</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-native/">React-native</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/29/3、调试/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          3、调试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/29/1、搭建环境和开始启动/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1、搭建环境和开始启动</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Tom
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/Android/" style="font-size: 16.67px;">Android</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Material-Design/" style="font-size: 13.33px;">Material Design</a> <a href="/tags/React-native/" style="font-size: 20px;">React-native</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;Tom&lt;br&gt; &lt;br&gt;Android开发，有为好青年&lt;br&gt; &lt;br&gt;热爱代码与动漫&lt;br&gt;</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

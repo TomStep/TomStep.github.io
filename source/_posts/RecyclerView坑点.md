@@ -96,7 +96,7 @@ RecyclerView用来代替ListView和GridView，它的优点很多，这里就不�
 
 
 
-
+**RecyclerView嵌套RecyclerView**
 
 
 
