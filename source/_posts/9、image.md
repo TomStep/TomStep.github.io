@@ -1,5 +1,5 @@
 ---
-title: 9、image
+title: RN学习：9、image
 date: 2017-03-29 10:51:30
 tags: [React-native]
 ---

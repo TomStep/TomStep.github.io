@@ -1,5 +1,5 @@
 ---
-title: 7、flexBox布局
+title: RN学习：7、flexBox布局
 date: 2017-03-29 10:48:15
 tags: [React-native]
 ---

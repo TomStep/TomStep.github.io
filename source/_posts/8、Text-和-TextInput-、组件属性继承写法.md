@@ -1,5 +1,5 @@
 ---
-title: 8、Text 和 TextInput 、组件属性继承写法
+title: RN学习：8、Text 和 TextInput组件属性继承写法
 date: 2017-03-29 10:50:16
 tags: [React-native]
 ---

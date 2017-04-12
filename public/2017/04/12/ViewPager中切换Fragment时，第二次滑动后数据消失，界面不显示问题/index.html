@@ -6,18 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>RN学习：6、样式 | Tom&#39;s Blog</title>
+  <title>ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题 | Tom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="style属性可以是一个普通的JavaScript对象。这是最简单的用法，因而在示例代码中很常见。你还可以传入一个数组——在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。">
+  <meta name="description" content="使用ViewPager+Fragment进行界面切换，当界面数量大于等于3时，出现两次滑动后的界面会消失。针对这问题，我们可以先看看Fragment在这过程做了什么。
+分析3个fragment声明周期：Fragment A，Fragment B，Fragment C
+刚进入时，对于FragmentA来说，创建数据：–&amp;gt; onCreateView–&amp;gt; onStart
+从A滑动到C时，对于">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RN学习：6、样式">
-<meta property="og:url" content="http://yoursite.com/2017/03/29/6、样式/index.html">
+<meta property="og:title" content="ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题/index.html">
 <meta property="og:site_name" content="Tom's Blog">
-<meta property="og:description" content="style属性可以是一个普通的JavaScript对象。这是最简单的用法，因而在示例代码中很常见。你还可以传入一个数组——在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。">
-<meta property="og:updated_time" content="2017-04-12T07:37:30.000Z">
+<meta property="og:description" content="使用ViewPager+Fragment进行界面切换，当界面数量大于等于3时，出现两次滑动后的界面会消失。针对这问题，我们可以先看看Fragment在这过程做了什么。
+分析3个fragment声明周期：Fragment A，Fragment B，Fragment C
+刚进入时，对于FragmentA来说，创建数据：–&amp;gt; onCreateView–&amp;gt; onStart
+从A滑动到C时，对于">
+<meta property="og:updated_time" content="2017-04-12T08:51:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RN学习：6、样式">
-<meta name="twitter:description" content="style属性可以是一个普通的JavaScript对象。这是最简单的用法，因而在示例代码中很常见。你还可以传入一个数组——在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。">
+<meta name="twitter:title" content="ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题">
+<meta name="twitter:description" content="使用ViewPager+Fragment进行界面切换，当界面数量大于等于3时，出现两次滑动后的界面会消失。针对这问题，我们可以先看看Fragment在这过程做了什么。
+分析3个fragment声明周期：Fragment A，Fragment B，Fragment C
+刚进入时，对于FragmentA来说，创建数据：–&amp;gt; onCreateView–&amp;gt; onStart
+从A滑动到C时，对于">
   
     <link rel="alternative" href="/atom.xml" title="Tom&#39;s Blog" type="application/atom+xml">
   
@@ -126,7 +135,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-6、样式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -136,7 +145,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      RN学习：6、样式
+      ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题
     </h1>
   
 
@@ -144,22 +153,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>style属性可以是一个普通的JavaScript对象。这是最简单的用法，因而在示例代码中很常见。你还可以传入一个数组——在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。</p>
+        <p>使用ViewPager+Fragment进行界面切换，当界面数量大于等于3时，出现两次滑动后的界面会消失。针对这问题，我们可以先看看Fragment在这过程做了什么。</p>
+<h3 id="分析3个fragment声明周期："><a href="#分析3个fragment声明周期：" class="headerlink" title="分析3个fragment声明周期："></a>分析3个fragment声明周期：</h3><p>Fragment A，Fragment B，Fragment C</p>
+<p>刚进入时，对于FragmentA来说，创建数据：<br>–&gt; onCreateView<br>–&gt; onStart</p>
+<p>从A滑动到C时，对于FragmentA来说，数据被销毁：<br>–&gt; onPause<br>–&gt; onStop<br>–&gt; onDestroyView<br>–&gt; OnDestroy</p>
+<p>再从C滑回A时，对于FragmentA来说，数据重建：<br>–&gt; onCreateView<br>–&gt; onStart</p>
+<p>这时，就会发现FragmentA消失不见了。</p>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import React, &#123;</div><div class="line">  Component</div><div class="line">&#125; from 'react';</div><div class="line"></div><div class="line">import &#123;</div><div class="line">  AppRegistry,</div><div class="line">  StyleSheet,</div><div class="line">  View,</div><div class="line">  Image,</div><div class="line">  Text,</div><div class="line">&#125; from 'react-native';</div><div class="line"></div><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">  bigblue: &#123;</div><div class="line">    color: 'blue',</div><div class="line">    fontWeight: 'bold',</div><div class="line">    fontSize: 30,</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  red: &#123;</div><div class="line">    color: 'red',</div><div class="line">  &#125;,</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">class LotsOfStyles extends Component &#123;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      <span class="tag">&lt;<span class="name">View</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;styles.red&#125;</span>&gt;</span>just red<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;styles.bigblue&#125;</span>&gt;</span>just bigblue<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;[styles.bigblue,</span> <span class="attr">styles.red</span>]&#125;&gt;</span>bigblue, then red<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;[styles.red,</span> <span class="attr">styles.bigblue</span>]&#125;&gt;</span>red, then bigblue<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">View</span>&gt;</span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">AppRegistry.registerComponent('AwesomeProject', () =&gt; LotsOfStyles);</div></pre></td></tr></table></figure>
-<p>要点：<br>1、使用StyleSheet.create来集中定义组件的样式。<br>2、与css成叠类似，也可以覆盖</p>
+<h3 id="分析原因："><a href="#分析原因：" class="headerlink" title="分析原因："></a>分析原因：</h3><p>主要原因是：onCreateView（给当前fragment绘制UI布局）被调用了两次，添加了多个View。</p>
+<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><h4 id="方案一、"><a href="#方案一、" class="headerlink" title="方案一、"></a>方案一、</h4><p>设置ViewPager的缓存界面数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//表示缓存当前界面每一侧的界面数</span></div><div class="line">viewPager.setOffscreenPageLimit(<span class="number">2</span>);</div></pre></td></tr></table></figure>
+<p>为了避免Fragment的数据被销毁，增加ViewPager的缓存数量，以避免Fragment被销毁。（界面数量固定，且数量较少时可以使用）</p>
+<h4 id="方案二、"><a href="#方案二、" class="headerlink" title="方案二、"></a>方案二、</h4><p>复用Fragmnet的RootView，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">private</span> View mRootView;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDestroyView</span><span class="params">()</span></span>&#123;</div><div class="line">    supe.onDestroyView();</div><div class="line"></div><div class="line">    <span class="comment">//移除mRootView，防止添加多个View</span></div><div class="line">    <span class="keyword">if</span>(<span class="keyword">null</span> != mRootView)&#123;</div><div class="line">        ((ViewGroup)mRootView.getParent()).removeView(mRootView);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater,ViewGroup container,Bundle bundle)</span></span>&#123;</div><div class="line">    </div><div class="line">    <span class="comment">//若mRootView为null，则初始化view。否则复用mRootView</span></div><div class="line">    <span class="keyword">if</span>(<span class="keyword">null</span> == mRootView)&#123;</div><div class="line">        mRootView = inflater.inflater(...);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> mRootView;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2017/03/29/6、样式/" class="archive-article-date">
-  	<time datetime="2017-03-29T02:47:18.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-03-29</time>
+      <a href="/2017/04/12/ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题/" class="archive-article-date">
+  	<time datetime="2017-04-12T08:02:28.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-04-12</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-native/">React-native</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
       
@@ -172,18 +190,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/29/7、flexBox布局/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RN学习：7、flexBox布局
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/29/状态（State）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">5、状态（State）</div>
+    <a href="/2017/04/12/Glide-添加请求头/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Glide自定义请求头，加载图片无法显示的图片资源。</div>
       <i class="icon-circle-right"></i>
     </a>
   
