@@ -1,0 +1,47 @@
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Hexo version: \u001b[35m3.3.1\u001b[39m","time":"2017-04-12T09:21:46.738Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Working directory: \u001b[35m~/Documents/学习/学习笔记/我的博客/TomStep.github.io/\u001b[39m","time":"2017-04-12T09:21:46.741Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Config loaded: \u001b[35m~/Documents/学习/学习笔记/我的博客/TomStep.github.io/_config.yml\u001b[39m","time":"2017-04-12T09:21:46.833Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-deployer-git\u001b[39m","time":"2017-04-12T09:21:46.844Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-archive\u001b[39m","time":"2017-04-12T09:21:46.846Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-category\u001b[39m","time":"2017-04-12T09:21:46.849Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-index\u001b[39m","time":"2017-04-12T09:21:46.851Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-generator-tag\u001b[39m","time":"2017-04-12T09:21:46.852Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-ejs\u001b[39m","time":"2017-04-12T09:21:46.855Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-stylus\u001b[39m","time":"2017-04-12T09:21:46.858Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-renderer-marked\u001b[39m","time":"2017-04-12T09:21:46.863Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Plugin loaded: \u001b[35mhexo-server\u001b[39m","time":"2017-04-12T09:21:46.925Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Loading database.","time":"2017-04-12T09:21:46.935Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":30,"msg":"Start processing","time":"2017-04-12T09:21:47.015Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35mfavicon.ico\u001b[39m","time":"2017-04-12T09:21:47.046Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/1、搭建环境和开始启动.md\u001b[39m","time":"2017-04-12T09:21:47.076Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/2、第一个程序与状态机的概念.md\u001b[39m","time":"2017-04-12T09:21:47.076Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/3、调试.md\u001b[39m","time":"2017-04-12T09:21:47.076Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/4、Hello-World程序.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/6、样式.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/7、flexBox布局.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/8、Text-和-TextInput-、组件属性继承写法.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/9、image.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/DataBinding笔记.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/Android6.0以上获取权限总结.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/Gson解析泛型问题.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/Material-Design-UI组件学习笔记（2）之Behavior.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/RecyclerView坑点.md\u001b[39m","time":"2017-04-12T09:21:47.077Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/Glide-添加请求头.md\u001b[39m","time":"2017-04-12T09:21:47.078Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/Material-Design学习笔记（1）.md\u001b[39m","time":"2017-04-12T09:21:47.078Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/ViewPager中切换Fragment时，第二次滑动后数据消失，界面不显示问题.md\u001b[39m","time":"2017-04-12T09:21:47.082Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/我的第一篇博客.md\u001b[39m","time":"2017-04-12T09:21:47.082Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/状态（State）.md\u001b[39m","time":"2017-04-12T09:21:47.082Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Processed: \u001b[35m_posts/java-反射机制.md\u001b[39m","time":"2017-04-12T09:21:47.082Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35mpage\u001b[39m","time":"2017-04-12T09:21:47.144Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35mpost\u001b[39m","time":"2017-04-12T09:21:47.145Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35marchive\u001b[39m","time":"2017-04-12T09:21:47.145Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35mcategory\u001b[39m","time":"2017-04-12T09:21:47.146Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35mindex\u001b[39m","time":"2017-04-12T09:21:47.147Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35mtag\u001b[39m","time":"2017-04-12T09:21:47.149Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Generator: \u001b[35masset\u001b[39m","time":"2017-04-12T09:21:47.151Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":30,"msg":"Hexo is running at \u001b[4mhttp://localhost:4000/\u001b[24m. Press Ctrl+C to stop.","time":"2017-04-12T09:21:47.165Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Database saved","time":"2017-04-12T09:21:47.194Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":40,"msg":"No layout: \u001b[35mindex.html\u001b[39m","time":"2017-04-12T09:21:49.774Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":40,"msg":"No layout: \u001b[35mindex.html\u001b[39m","time":"2017-04-12T09:21:58.932Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":30,"msg":"Good bye","time":"2017-04-12T09:22:06.668Z","v":0}
+{"name":"hexo","hostname":"TangJundeMacBook-Pro.local","pid":15128,"level":20,"msg":"Database saved","time":"2017-04-12T09:22:06.703Z","v":0}
