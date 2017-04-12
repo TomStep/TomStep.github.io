@@ -9,6 +9,7 @@
   <title>RN学习：4、Hello World程序 | Tom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="第一个hello world 代码">
+<meta name="keywords" content="React-native">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RN学习：4、Hello World程序">
 <meta property="og:url" content="http://yoursite.com/2017/03/29/4、Hello-World程序/index.html">
@@ -145,7 +146,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="第一个hello-world-代码"><a href="#第一个hello-world-代码" class="headerlink" title="第一个hello world 代码"></a>第一个hello world 代码</h3><a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//导入组件</span></div><div class="line"><span class="keyword">import</span> React, &#123;</div><div class="line">  Component</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  AppRegistry,</div><div class="line">  StyleSheet,</div><div class="line">  Text,</div><div class="line">  View</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</div><div class="line"></div><div class="line"><span class="comment">//定义根容器</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Hellow</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;Text&gt;Hello ,world!!&lt;/Text&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//注册</span></div><div class="line">AppRegistry.registerComponent(<span class="string">'AwesomeProject'</span>, () =&gt; Hellow);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//导入组件</span></div><div class="line"><span class="keyword">import</span> React, &#123;</div><div class="line">  Component</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  AppRegistry,</div><div class="line">  StyleSheet,</div><div class="line">  Text,</div><div class="line">  View</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</div><div class="line"></div><div class="line"><span class="comment">//定义根容器</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Hellow</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">Text</span>&gt;</span>Hello ,world!!<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//注册</span></div><div class="line">AppRegistry.registerComponent(<span class="string">'AwesomeProject'</span>, () =&gt; Hellow);</div></pre></td></tr></table></figure>
 <p>要点：<br>1、improt 用来导入所需要的组件（详细可以参考ES6）<br>2、定义根容器</p>
 <pre><code>+ 需要继承 Component对象。
 + 要在render（）方法内返回JSX语句。如（ &lt;Text &gt;Hello ,world!!&lt;/Text&gt;）
@@ -180,18 +181,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/29/状态（State）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/29/3、调试/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          5、状态（State）
+          RN学习：3、调试
         
       </div>
     </a>
   
   
-    <a href="/2017/03/29/3、调试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">RN学习：3、调试</div>
+    <a href="/2017/03/29/状态（State）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">5、状态（State）</div>
       <i class="icon-circle-right"></i>
     </a>
   
