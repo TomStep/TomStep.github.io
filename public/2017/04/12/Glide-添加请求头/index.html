@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/12/Glide-添加请求头/index.html">
 <meta property="og:site_name" content="Tom's Blog">
 <meta property="og:description" content="在使用Glide的时候一般都不会考虑添加请求头。有些时候（抓图）会因为“防盗链”的原因，图片显示不出来。这时候就需要添加请求头，以获取图片资源。 什么是“防盗链” 防止别人通过一些技术手段绕过本站的资源展示页面，盗用本站的资源，让绕开本站资源展示页面的资源链接失效。  一般的防盗链原理也很简单，都是服务器验证请求头的Referer和Host的值，最多再加上cookie验证。如果你复制了这个图片地址">
-<meta property="og:updated_time" content="2017-04-12T08:00:57.000Z">
+<meta property="og:updated_time" content="2017-04-13T08:19:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Glide自定义请求头，加载图片无法显示的图片资源。">
 <meta name="twitter:description" content="在使用Glide的时候一般都不会考虑添加请求头。有些时候（抓图）会因为“防盗链”的原因，图片显示不出来。这时候就需要添加请求头，以获取图片资源。 什么是“防盗链” 防止别人通过一些技术手段绕过本站的资源展示页面，盗用本站的资源，让绕开本站资源展示页面的资源链接失效。  一般的防盗链原理也很简单，都是服务器验证请求头的Referer和Host的值，最多再加上cookie验证。如果你复制了这个图片地址">
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -284,7 +284,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-12T15:35:52+08:00">
                 2017-04-12
@@ -329,7 +329,7 @@
 <p>一般的防盗链原理也很简单，都是服务器验证请求头的<strong>Referer</strong>和<strong>Host</strong>的值，最多再加上<strong>cookie</strong>验证。如果你复制了这个图片地址，然后直接到 浏览器地址上面访问是无法显示的，因为请求里面没有验证的值。</p>
 <a id="more"></a>
 <h3 id="在Gilde上添加请求头"><a href="#在Gilde上添加请求头" class="headerlink" title="在Gilde上添加请求头"></a>在Gilde上添加请求头</h3><p>实现Headers接口,重写getHeaders()方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> - An interface for a wrapper for a set of headers to be included in a Glide request.</div><div class="line"> - Implementations must implement equals() and hashcode().</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Headers</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     - An empty Headers object that can be used if users don't want to provide headers.</div><div class="line">     *</div><div class="line">     - <span class="doctag">@deprecated</span> Use &#123;<span class="doctag">@link</span> #DEFAULT&#125; instead.</div><div class="line">     */</div><div class="line">    <span class="meta">@Deprecated</span></div><div class="line">    Headers NONE = <span class="keyword">new</span> Headers() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> Map&lt;String, String&gt; <span class="title">getHeaders</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> Collections.emptyMap();</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     - A Headers object containing reasonable defaults that should be used when users don't want</div><div class="line">     - to provide their own headers.</div><div class="line">     */</div><div class="line">    Headers DEFAULT = <span class="keyword">new</span> LazyHeaders.Builder().build();</div><div class="line"></div><div class="line">    <span class="function">Map&lt;String, String&gt; <span class="title">getHeaders</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Headers</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Deprecated</span></div><div class="line">    Headers NONE = <span class="keyword">new</span> Headers() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> Map&lt;String, String&gt; <span class="title">getHeaders</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> Collections.emptyMap();</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    Headers DEFAULT = <span class="keyword">new</span> LazyHeaders.Builder().build();</div><div class="line"></div><div class="line">    <span class="function">Map&lt;String, String&gt; <span class="title">getHeaders</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>实现方式如下：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">@Override</div><div class="line">public Map&lt;String, String&gt; getHeaders() &#123;</div><div class="line">    Map&lt;String, String&gt; header = new HashMap&lt;&gt;();</div><div class="line"></div><div class="line">    //不一定都要添加，具体看原站的请求信息</div><div class="line">    header.put(&quot;Referer&quot;, &quot;__查看下Referer中需要添加的值__&quot;);</div><div class="line">    header.put(&quot;Host&quot;,&quot;__查看下Host中需要添加的值__&quot;)</div><div class="line">    return header;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>显示：</strong></p>
@@ -437,10 +437,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -461,7 +461,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -474,7 +474,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -540,7 +540,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
