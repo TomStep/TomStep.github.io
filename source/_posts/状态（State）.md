@@ -15,7 +15,7 @@ tags: [React-native]
 
 假如我们需要制作一段不停闪烁的文字。文字内容本身在组件创建时就已经指定好了，所以文字内容应该是一个prop。而文字的显示或隐藏的状态（快速的显隐切换就产生了闪烁的效果）则是随着时间变化的，因此这一状态应该写到state中。
 
-```html 
+``` 
 
     import React, {
       Component
@@ -83,7 +83,7 @@ setInterval(code,millisec)
 
 使用clearInterval()函数来取消循环
 
-```html 
+``` 
 
     <script language=javascript>
     var int=self.setInterval("clock()",50) //self表示当前页面

@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/29/9、image/index.html">
 <meta property="og:site_name" content="Tom's Blog">
 <meta property="og:description" content="一个用于显示多种不同类型图片的React组件，包括网络图片、静态资源、临时的本地图片、以及本地磁盘上的图片（如相册）等。详细用法参阅图片文档。">
-<meta property="og:updated_time" content="2017-04-12T07:37:36.000Z">
+<meta property="og:updated_time" content="2017-04-13T09:03:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RN学习：9、image">
 <meta name="twitter:description" content="一个用于显示多种不同类型图片的React组件，包括网络图片、静态资源、临时的本地图片、以及本地磁盘上的图片（如相册）等。详细用法参阅图片文档。">
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -284,7 +284,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T10:51:30+08:00">
                 2017-03-29
@@ -327,7 +327,7 @@
 </blockquote>
 <a id="more"></a>
 <p>目前暂时只能使用网络图片加载</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line"><span class="tag">&lt;<span class="name">Image</span></span></div><div class="line">  <span class="attr">style</span>=<span class="string">&#123;styles.logo&#125;</span></div><div class="line">  <span class="attr">source</span>=<span class="string">&#123;&#123;uri:</span> '<span class="attr">http:</span>//<span class="attr">facebook.github.io</span>/<span class="attr">react</span>/<span class="attr">img</span>/<span class="attr">logo_og.png</span>'&#125;&#125;</div><div class="line">/&gt;</div><div class="line"></div><div class="line">//成为背景图片</div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">Image</span>      //成为背景图</span></div><div class="line">     <span class="attr">style</span>=<span class="string">&#123;&#123;</span></div><div class="line">      <span class="attr">flex:1</span>,</div><div class="line">     &#125;&#125;</div><div class="line">     <span class="attr">source</span>=<span class="string">&#123;&#123;uri:</span>"<span class="attr">http:</span>//<span class="attr">ofjn4kn3q.bkt.clouddn.com</span>/<span class="attr">bg.png</span>"&#125;&#125;</div><div class="line">    &gt;</div><div class="line"></div><div class="line">    、、、内部其他代码</div><div class="line">     </div><div class="line"><span class="tag">&lt;/<span class="name">Image</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">    </div><div class="line">&lt;Image</div><div class="line">  style=&#123;styles.logo&#125;</div><div class="line">  source=&#123;&#123;uri: &apos;http://facebook.github.io/react/img/logo_og.png&apos;&#125;&#125;</div><div class="line">/&gt;</div><div class="line"></div><div class="line">//成为背景图片</div><div class="line"></div><div class="line">  &lt;Image      //成为背景图</div><div class="line">     style=&#123;&#123;</div><div class="line">      flex:1,</div><div class="line">     &#125;&#125;</div><div class="line">     source=&#123;&#123;uri:&quot;http://ofjn4kn3q.bkt.clouddn.com/bg.png&quot;&#125;&#125;</div><div class="line">    &gt;</div><div class="line"></div><div class="line">    、、、内部其他代码</div><div class="line">     </div><div class="line">&lt;/Image&gt;</div></pre></td></tr></table></figure>
 <h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>三个回调方法：</p>
 <ul>
 <li>onLoad        //图片加载成功时加载</li>
@@ -387,6 +387,10 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/12/Glide-添加请求头/" rel="next" title="Glide自定义请求头，加载图片无法显示的图片资源。">
+                <i class="fa fa-chevron-left"></i> Glide自定义请求头，加载图片无法显示的图片资源。
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -444,10 +448,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -468,7 +472,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">17</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -481,7 +485,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -547,7 +551,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

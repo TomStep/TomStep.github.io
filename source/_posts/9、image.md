@@ -11,7 +11,7 @@ tags: [React-native]
 
 目前暂时只能使用网络图片加载
 
-```html 
+``` 
     
       <Image
         style={styles.logo}

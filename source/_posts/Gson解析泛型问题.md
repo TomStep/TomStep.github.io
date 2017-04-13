@@ -8,7 +8,7 @@ tags: [Android]
 
 后台服务器传回的json一般都是这样的类型：
 
-```java
+```
 {
     "status": 0, 
     "msg" : null, 

@@ -13,7 +13,7 @@ tags: [React-native]
 
 伪代码
 
-```html 
+```
     
     renderText: function() {
       return (
